@@ -15,6 +15,7 @@ dependencies[] = media_youtube
 dependencies[] = print
 dependencies[] = strongarm
 dependencies[] = pathauto
+dependencies[] = token
 datestamp = 1338117520
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1

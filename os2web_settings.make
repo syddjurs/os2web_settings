@@ -43,3 +43,6 @@ projects[media_youtube][version] = "2.0-rc2"
 
 projects[print][subdir] = "contrib"
 projects[print][version] = "1.2"
+
+projects[token][subdir] = "contrib"
+projects[token][version] = "1.5"
