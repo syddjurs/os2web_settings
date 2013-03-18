@@ -24,7 +24,6 @@ features[filter][] = full_html
 features[user_permission][] = access content
 features[user_permission][] = access content overview
 features[user_permission][] = add media from remote sources
-features[user_permission][] = administer @font-your-face
 features[user_permission][] = administer nodes
 features[user_permission][] = delete revisions
 features[user_permission][] = import media
