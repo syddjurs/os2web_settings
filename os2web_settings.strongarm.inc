@@ -20,48 +20,6 @@ function os2web_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'color_cmstheme_files';
-  $strongarm->value = '';
-  $export['color_cmstheme_files'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'color_cmstheme_logo';
-  $strongarm->value = '';
-  $export['color_cmstheme_logo'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'color_cmstheme_palette';
-  $strongarm->value = '';
-  $export['color_cmstheme_palette'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'color_cmstheme_screenshot';
-  $strongarm->value = '';
-  $export['color_cmstheme_screenshot'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'color_cmstheme_stylesheets';
-  $strongarm->value = '';
-  $export['color_cmstheme_stylesheets'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'cookiecontrol_countries';
-  $strongarm->value = '';
-  $export['cookiecontrol_countries'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'cookiecontrol_fulltext';
   $strongarm->value = '<p>Nogle cookies på hjemmsiden er vigtige for at sitet fungerer som forventet. De bruges for eksempel når du indsender en formular eller på anden måde får en personlig respons fra hjemmesiden.</p><p>Vi bruger også ikke essentielle cookies til, anonymt, at spore brugen af hjemmesiden. Hvis du ikke er interesseret i at vi bruger disse kan vi undlade at gemme nogen former for cookies. Men vi kan så ikke garantere at sitet fungerer fuldt ud.</p>';
   $export['cookiecontrol_fulltext'] = $strongarm;
@@ -409,26 +367,24 @@ example.org';
     'news' => 'news',
     'selvbetjeningslinks' => 'selvbetjeningslinks',
     'spotbox' => 'spotbox',
-    'arp_case' => 0,
-    'arp_document' => 0,
+    'os2web_cp_case' => 0,
+    'os2web_cp_document' => 0,
     'baggrund' => 0,
     'rotating_image' => 0,
     'borger_dk_permalink' => 0,
-    'borgerservices' => 0,
-    'bullet_point' => 0,
-    'bullet_point_attachment' => 0,
+    'os2web_citizenservices_service' => 0,
+    'os2web_meeting_bullet_point' => 0,
+    'os2web_meeting_bullet_attachment' => 0,
     'files' => 0,
-    'esdh_dokument' => 0,
-    'esdh_sag' => 0,
     'galleri' => 0,
     'right_column' => 0,
     'institution' => 0,
     'kontaktblok' => 0,
-    'knactivity' => 0,
+    'os2web_kulturnaut_knactivity' => 0,
     'local_plan' => 0,
     'media' => 0,
-    'meeting' => 0,
-    'ofir_job' => 0,
+    'os2web_meeting_meeting' => 0,
+    'os2web_ofir_job' => 0,
     'panel' => 0,
     'person' => 0,
     'politician' => 0,
@@ -790,20 +746,6 @@ example.org';
   $strongarm->name = 'print_pdf_sys_link_visibility';
   $strongarm->value = '0';
   $export['print_pdf_sys_link_visibility'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'site_frontpage';
-  $strongarm->value = 'home';
-  $export['site_frontpage'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'theme_default';
-  $strongarm->value = 'cmstheme';
-  $export['theme_default'] = $strongarm;
 
   return $export;
 }

@@ -42,16 +42,6 @@ function os2web_settings_user_default_permissions() {
     'module' => 'media_internet',
   );
 
-  // Exported permission: administer @font-your-face.
-  $permissions['administer @font-your-face'] = array(
-    'name' => 'administer @font-your-face',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'fontyourface',
-  );
-
   // Exported permission: administer nodes.
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
@@ -158,24 +148,6 @@ function os2web_settings_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own esdh_dokument content.
-  $permissions['delete own esdh_dokument content'] = array(
-    'name' => 'delete own esdh_dokument content',
-    'roles' => array(
-      0 => 'Administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete own esdh_sag content.
-  $permissions['delete own esdh_sag content'] = array(
-    'name' => 'delete own esdh_sag content',
-    'roles' => array(
-      0 => 'Administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: delete own galleri content.
   $permissions['delete own galleri content'] = array(
     'name' => 'delete own galleri content',
@@ -270,24 +242,6 @@ function os2web_settings_user_default_permissions() {
     'name' => 'edit own contentpage content',
     'roles' => array(
       0 => 'authenticated user',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit own esdh_dokument content.
-  $permissions['edit own esdh_dokument content'] = array(
-    'name' => 'edit own esdh_dokument content',
-    'roles' => array(
-      0 => 'Administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit own esdh_sag content.
-  $permissions['edit own esdh_sag content'] = array(
-    'name' => 'edit own esdh_sag content',
-    'roles' => array(
-      0 => 'Administrator',
     ),
     'module' => 'node',
   );
