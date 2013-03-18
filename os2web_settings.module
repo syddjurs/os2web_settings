@@ -4,13 +4,11 @@
  * @file
  * Code for the OS2Web indstillinger feature.
  */
+
 include_once('os2web_settings.features.inc');
 
 /**
- * os2web_settings_permission 
- * 
- * @access public
- * @return void
+ * Os2web_settings_permission.
  */
 function os2web_settings_permission() {
   return array(
@@ -22,8 +20,7 @@ function os2web_settings_permission() {
 }
 
 /**
- * Implementation of hook_menu()
- *
+ * Implements hook_menu().
  */
 function os2web_settings_menu() {
   $items['admin/config/os2web'] = array(
@@ -65,24 +62,14 @@ function os2web_settings_menu() {
 }
 
 /**
- * os2web_settings_import_form_submit 
- * 
- * @param mixed $form 
- * @param mixed $form_state 
- * @access public
- * @return void
+ * Implements hook_import_form_submit().
  */
 function os2web_settings_import_form_submit($form, $form_state) {
   error_log('MARK - ' . basename(__FILE__) . ':' . __LINE__ . ' in ' . __FUNCTION__ . '()');
 }
 
 /**
- * os2web_settings_import_form 
- * 
- * @param mixed $form 
- * @param mixed $form_state 
- * @access public
- * @return void
+ * Implements hook_import_form().
  */
 function os2web_settings_import_form($form, $form_state) {
   $form['start'] = array(
@@ -93,11 +80,7 @@ function os2web_settings_import_form($form, $form_state) {
 }
 
 /**
- * os2web_settings_nodedump 
- * 
- * @param mixed $nid 
- * @access public
- * @return void
+ * Loads a node and dumps it.
  */
 function os2web_settings_nodedump($nid) {
   $node = node_load($nid);
@@ -106,12 +89,7 @@ function os2web_settings_nodedump($nid) {
 }
 
 /**
- * os2web_settings_start_form_submit 
- * 
- * @param mixed $form 
- * @param mixed $form_state 
- * @access public
- * @return void
+ * Implements hook_start_form_submit().
  */
 function os2web_settings_start_form_submit(&$form, &$form_state) {
   $fields = db_select('field_config', 'fc')->fields('fc', array('field_name'))->execute()->fetchCol();
@@ -120,31 +98,24 @@ function os2web_settings_start_form_submit(&$form, &$form_state) {
     'finished' => 'os2web_settings_langfix_finished',
   );
   foreach ($fields as $field) {
-    //  $batch['operations'][] = array('os2web_settings_langfix_process', array('revision', $field));
-    $batch['operations'][] = array('os2web_settings_langfix_process', array('data', $field));
+    // $batch['operations'][] = array('os2web_settings_langfix_process', array('revision', $field));
+
+    $batch['operations'][] = array('os2web_settings_langfix_process',
+      array('data', $field),
+    );
   }
   batch_set($batch);
 }
 
 /**
- * Deprecated function to fix node translations 
- * 
- * @param mixed $success 
- * @param mixed $results 
- * @param mixed $operations 
- * @access public
- * @return void
+ * Deprecated function to fix node translations.
  */
 function os2web_settings_langfix_finished($success, $results, $operations) {
   error_log("Var: \$results = " . print_r($results, 1));
 }
 
 /**
- * Deprecated function to fix node translations 
- * 
- * @param mixed $context 
- * @access public
- * @return void
+ * Deprecated function to fix node translations.
  */
 function os2web_settings_langfix_disable_translation(&$context) {
   db_query('UPDATE {field_config} SET translatable = 0');
@@ -152,16 +123,10 @@ function os2web_settings_langfix_disable_translation(&$context) {
 }
 
 /**
- * Deprecated function to fix node translations 
- * 
- * @param mixed $type 
- * @param mixed $field 
- * @param mixed $context 
- * @access public
- * @return void
+ * Deprecated function to fix node translation.
  */
 function os2web_settings_langfix_process($type, $field, &$context) {
-  // Local init
+  // Local init.
   $table = 'field_data_' . $field;
   $revtable = 'field_revision_' . $field;
 
@@ -186,9 +151,7 @@ function os2web_settings_langfix_process($type, $field, &$context) {
   while ($row = $ids->fetchObject()) {
     error_log("Var: \$row->entity_id = " . print_r($row->entity_id, 1));
     db_update($table)
-        ->fields(array(
-          'language' => 'und'
-        ))
+        ->fields(array('language' => 'und'))
         ->condition('entity_id', $row->entity_id)
         ->condition('revision_id', $row->revision_id)
         ->condition('delta', $row->delta)
@@ -207,9 +170,7 @@ function os2web_settings_langfix_process($type, $field, &$context) {
     }
     else {
       db_update($revtable)
-          ->fields(array(
-            'language' => 'und'
-          ))
+          ->fields(array('language' => 'und'))
           ->condition('entity_id', $row->entity_id)
           ->condition('revision_id', $row->revision_id)
           ->condition('delta', $row->delta)
@@ -217,7 +178,11 @@ function os2web_settings_langfix_process($type, $field, &$context) {
     }
   }
 
-  $context['message'] = t('Processing %field', array('%field' => $field, '%nid' => $context['sandbox']['progress'] + 1, '%total' => $context['sandbox']['max']));
+  $context['message'] = t('Processing %field', array(
+    '%field' => $field,
+    '%nid' => $context['sandbox']['progress'] + 1,
+    '%total' => $context['sandbox']['max'],
+  ));
 
   $context['finished'] = 1;
 }
