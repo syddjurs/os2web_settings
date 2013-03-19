@@ -10,6 +10,17 @@
 function os2web_settings_user_default_permissions() {
   $permissions = array();
 
+
+  // Exported permission: administer os2web.
+  $permissions['administer os2web'] = array(
+    'name' => 'administer os2web',
+    'roles' => array(
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
+    ),
+    'module' => 'os2web_settings',
+  );
+
   // Exported permission: access content.
   $permissions['access content'] = array(
     'name' => 'access content',
@@ -24,10 +35,10 @@ function os2web_settings_user_default_permissions() {
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Editor',
-      2 => 'Kommunikation',
-      3 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_editor',
+      2 => 'os2web_base_role_communication',
+      3 => 'os2web_base_role_webmaster',
     ),
     'module' => 'node',
   );
@@ -36,8 +47,8 @@ function os2web_settings_user_default_permissions() {
   $permissions['add media from remote sources'] = array(
     'name' => 'add media from remote sources',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
     ),
     'module' => 'media_internet',
   );
@@ -46,8 +57,8 @@ function os2web_settings_user_default_permissions() {
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
     ),
     'module' => 'node',
   );
@@ -56,8 +67,8 @@ function os2web_settings_user_default_permissions() {
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
     ),
     'module' => 'node',
   );
@@ -66,8 +77,8 @@ function os2web_settings_user_default_permissions() {
   $permissions['import media'] = array(
     'name' => 'import media',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
     ),
     'module' => 'media',
   );
@@ -76,8 +87,8 @@ function os2web_settings_user_default_permissions() {
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
     ),
     'module' => 'node',
   );
@@ -86,8 +97,8 @@ function os2web_settings_user_default_permissions() {
   $permissions['show format selection for file'] = array(
     'name' => 'show format selection for file',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
     ),
     'module' => 'better_formats',
   );
@@ -96,8 +107,8 @@ function os2web_settings_user_default_permissions() {
   $permissions['show format selection for node'] = array(
     'name' => 'show format selection for node',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
     ),
     'module' => 'better_formats',
   );
@@ -106,8 +117,8 @@ function os2web_settings_user_default_permissions() {
   $permissions['show format selection for rules_config'] = array(
     'name' => 'show format selection for rules_config',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
     ),
     'module' => 'better_formats',
   );
@@ -116,8 +127,8 @@ function os2web_settings_user_default_permissions() {
   $permissions['show format selection for taxonomy_term'] = array(
     'name' => 'show format selection for taxonomy_term',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
     ),
     'module' => 'better_formats',
   );
@@ -126,8 +137,8 @@ function os2web_settings_user_default_permissions() {
   $permissions['show format selection for user'] = array(
     'name' => 'show format selection for user',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
     ),
     'module' => 'better_formats',
   );
@@ -136,8 +147,8 @@ function os2web_settings_user_default_permissions() {
   $permissions['show format tips'] = array(
     'name' => 'show format tips',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
     ),
     'module' => 'better_formats',
   );
@@ -146,8 +157,8 @@ function os2web_settings_user_default_permissions() {
   $permissions['show more format tips link'] = array(
     'name' => 'show more format tips link',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
     ),
     'module' => 'better_formats',
   );
@@ -166,8 +177,8 @@ function os2web_settings_user_default_permissions() {
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      0 => 'os2web_base_role_administrator',
+      1 => 'os2web_base_role_webmaster',
     ),
     'module' => 'node',
   );
