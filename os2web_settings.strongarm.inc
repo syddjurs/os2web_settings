@@ -366,7 +366,7 @@ example.org';
     'contentpage' => 'contentpage',
     'news' => 'news',
     'selvbetjeningslinks' => 'selvbetjeningslinks',
-    'spotbox' => 'spotbox',
+    'os2web_spotbox_box' => 'os2web_spotbox_box',
     'os2web_cp_case' => 0,
     'os2web_cp_document' => 0,
     'baggrund' => 0,
