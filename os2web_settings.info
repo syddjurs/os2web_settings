@@ -1,7 +1,7 @@
 name = OS2Web Settings
 description = Settings page on Admin. General Settings for OS2Web projects.
 core = 7.x
-package = OS2Web - Core
+package = OS2Web - Backend
 php = 5.2.4
 version = 7.x-1.10
 project = os2web_settings
