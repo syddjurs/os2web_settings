@@ -389,7 +389,7 @@ example.org';
     'person' => 0,
     'politician' => 0,
     'referat' => 0,
-    'sektionsside' => 0,
+    'os2web_sections_page' => 0,
     'speaker_paper' => 0,
     'tema' => 0,
     'webform' => 0,
