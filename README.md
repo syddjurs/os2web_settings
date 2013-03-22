@@ -18,6 +18,9 @@ Dependencies
 - print
 - strongarm
 - pathauto
+- workbench
+- workbench_access
+- workbench_files
 
 Configuration
 -----------
