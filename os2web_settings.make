@@ -46,3 +46,6 @@ projects[print][version] = "1.2"
 
 projects[token][subdir] = "contrib"
 projects[token][version] = "1.5"
+
+projects[rules][subdir] = "contrib"
+projects[rules][version] = "2.2"
