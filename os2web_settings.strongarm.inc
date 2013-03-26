@@ -752,35 +752,35 @@ example.org';
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_access_node_type_os2web_base_contentpage';
   $strongarm->value = 1;
-  $export['workbench_access_node_type_contentpage'] = $strongarm;
+  $export['workbench_access_node_type_os2web_base_contentpage'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_access_node_type_os2web_base_gallery';
   $strongarm->value = 1;
-  $export['workbench_access_node_type_galleri'] = $strongarm;
+  $export['workbench_access_node_type_os2web_base_gallery'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_access_node_type_os2web_base_iframe';
   $strongarm->value = 1;
-  $export['workbench_access_node_type_iframe_selvbetjeningsl_sning_mm'] = $strongarm;
+  $export['workbench_access_node_type_os2web_base_iframe'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_access_node_type_os2web_kulturnaut_knactivity';
   $strongarm->value = 0;
-  $export['workbench_access_node_type_knactivity'] = $strongarm;
+  $export['workbench_access_node_type_os2web_kulturnaut_knactivity'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'workbench_access_node_type_os2web_base_news';
   $strongarm->value = 1;
-  $export['workbench_access_node_type_news'] = $strongarm;
+  $export['workbench_access_node_type_os2web_base_news'] = $strongarm;
 
   return $export;
 }
