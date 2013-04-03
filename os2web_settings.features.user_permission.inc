@@ -192,16 +192,6 @@ function os2web_settings_user_default_permissions() {
     'module' => 'workbench',
   );
 
-  // Exported permission: access workbench access by role.
-  $permissions['access workbench access by role'] = array(
-    'name' => 'access workbench access by role',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'workbench_access',
-  );
-
   // Exported permission: administer workbench.
   $permissions['administer workbench'] = array(
     'name' => 'administer workbench',
@@ -210,48 +200,6 @@ function os2web_settings_user_default_permissions() {
       1 => 'Webmaster',
     ),
     'module' => 'workbench',
-  );
-
-  // Exported permission: administer workbench access.
-  $permissions['administer workbench access'] = array(
-    'name' => 'administer workbench access',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'workbench_access',
-  );
-
-  // Exported permission: assign workbench access.
-  $permissions['assign workbench access'] = array(
-    'name' => 'assign workbench access',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'workbench_access',
-  );
-
-  // Exported permission: batch update workbench access.
-  $permissions['batch update workbench access'] = array(
-    'name' => 'batch update workbench access',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'workbench_access',
-  );
-
-  // Exported permission: view workbench access information.
-  $permissions['view workbench access information'] = array(
-    'name' => 'view workbench access information',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Editor',
-      2 => 'Kommunikation',
-      3 => 'Webmaster',
-    ),
-    'module' => 'workbench_access',
   );
 
   // Exported permission: view workbench taxonomy pages.
