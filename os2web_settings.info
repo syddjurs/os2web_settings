@@ -44,7 +44,6 @@ features[user_permission][] = view own unpublished content
 features[user_permission][] = view revisions
 features[user_permission][] = access workbench
 features[user_permission][] = administer workbench
-features[user_permission][] = view workbench taxonomy pages
 features[variable][] = cache_lifetime
 features[variable][] = cookiecontrol_countries
 features[variable][] = cookiecontrol_fulltext

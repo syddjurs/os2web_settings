@@ -202,17 +202,5 @@ function os2web_settings_user_default_permissions() {
     'module' => 'workbench',
   );
 
-  // Exported permission: view workbench taxonomy pages.
-  $permissions['view workbench taxonomy pages'] = array(
-    'name' => 'view workbench taxonomy pages',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Editor',
-      2 => 'Kommunikation',
-      3 => 'Webmaster',
-    ),
-    'module' => 'workbench_access',
-  );
-
   return $permissions;
 }
