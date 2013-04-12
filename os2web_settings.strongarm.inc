@@ -457,7 +457,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_10_parent';
-  $strongarm->value = 'menu-indholdsmenu:912';
+  $strongarm->value = 'os2web-menu-contentmenu:912';
   $export['menu_block_10_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -513,7 +513,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_11_parent';
-  $strongarm->value = 'menu-indholdsmenu:0';
+  $strongarm->value = 'os2web-menu-contentmenu:0';
   $export['menu_block_11_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -569,7 +569,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_12_parent';
-  $strongarm->value = 'menu-indholdsmenu:0';
+  $strongarm->value = 'os2web-menu-contentmenu:0';
   $export['menu_block_12_parent'] = $strongarm;
 
   $strongarm = new stdClass();
