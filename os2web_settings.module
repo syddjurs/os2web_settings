@@ -36,7 +36,7 @@ function os2web_settings_menu() {
   );
   $items['admin/config/os2web/settings'] = array(
     'title' => 'OS2web Settings',
-    'description' => t('General settings for the OS2Web project'),
+    'description' => 'General settings for the OS2Web project',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('os2web_settings_settings_form'),
     'access arguments' => array('administer os2web'),
