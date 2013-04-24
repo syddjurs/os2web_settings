@@ -19,7 +19,6 @@ dependencies[] = token
 dependencies[] = os2web_base
 dependencies[] = workbench
 dependencies[] = workbench_access
-dependencies[] = workbench_files
 datestamp = 1338117520
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
