@@ -457,7 +457,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_10_parent';
-  $strongarm->value = 'os2web-menu-contentmenu:912';
+  $strongarm->value = 'menu-contentmenu:912';
   $export['menu_block_10_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -513,7 +513,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_11_parent';
-  $strongarm->value = 'os2web-menu-contentmenu:0';
+  $strongarm->value = 'menu-contentmenu:0';
   $export['menu_block_11_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -569,7 +569,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_12_parent';
-  $strongarm->value = 'os2web-menu-contentmenu:0';
+  $strongarm->value = 'menu-contentmenu:0';
   $export['menu_block_12_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -625,7 +625,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_1_parent';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'os2web-main-menu:0';
   $export['menu_block_1_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -746,41 +746,6 @@ example.org';
   $strongarm->name = 'print_pdf_sys_link_visibility';
   $strongarm->value = '0';
   $export['print_pdf_sys_link_visibility'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'workbench_access_node_type_os2web_base_contentpage';
-  $strongarm->value = 1;
-  $export['workbench_access_node_type_contentpage'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'workbench_access_node_type_os2web_base_gallery';
-  $strongarm->value = 1;
-  $export['workbench_access_node_type_galleri'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'workbench_access_node_type_os2web_base_iframe';
-  $strongarm->value = 1;
-  $export['workbench_access_node_type_iframe_selvbetjeningsl_sning_mm'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'workbench_access_node_type_os2web_kulturnaut_knactivity';
-  $strongarm->value = 0;
-  $export['workbench_access_node_type_knactivity'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'workbench_access_node_type_os2web_base_news';
-  $strongarm->value = 1;
-  $export['workbench_access_node_type_news'] = $strongarm;
 
   return $export;
 }

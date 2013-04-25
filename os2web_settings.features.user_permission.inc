@@ -10,23 +10,12 @@
 function os2web_settings_user_default_permissions() {
   $permissions = array();
 
-
-  // Exported permission: administer os2web.
-  $permissions['administer os2web'] = array(
-    'name' => 'administer os2web',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'os2web_settings',
-  );
-
   // Exported permission: access content.
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
-      0 => 'anonymous user',
-      1 => 'authenticated user',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -35,150 +24,10 @@ function os2web_settings_user_default_permissions() {
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Editor',
-      2 => 'Kommunikation',
-      3 => 'Webmaster',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: add media from remote sources.
-  $permissions['add media from remote sources'] = array(
-    'name' => 'add media from remote sources',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'media_internet',
-  );
-
-  // Exported permission: administer nodes.
-  $permissions['administer nodes'] = array(
-    'name' => 'administer nodes',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete revisions.
-  $permissions['delete revisions'] = array(
-    'name' => 'delete revisions',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: import media.
-  $permissions['import media'] = array(
-    'name' => 'import media',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'media',
-  );
-
-  // Exported permission: revert revisions.
-  $permissions['revert revisions'] = array(
-    'name' => 'revert revisions',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: show format selection for file.
-  $permissions['show format selection for file'] = array(
-    'name' => 'show format selection for file',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'better_formats',
-  );
-
-  // Exported permission: show format selection for node.
-  $permissions['show format selection for node'] = array(
-    'name' => 'show format selection for node',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'better_formats',
-  );
-
-  // Exported permission: show format selection for rules_config.
-  $permissions['show format selection for rules_config'] = array(
-    'name' => 'show format selection for rules_config',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'better_formats',
-  );
-
-  // Exported permission: show format selection for taxonomy_term.
-  $permissions['show format selection for taxonomy_term'] = array(
-    'name' => 'show format selection for taxonomy_term',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'better_formats',
-  );
-
-  // Exported permission: show format selection for user.
-  $permissions['show format selection for user'] = array(
-    'name' => 'show format selection for user',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'better_formats',
-  );
-
-  // Exported permission: show format tips.
-  $permissions['show format tips'] = array(
-    'name' => 'show format tips',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'better_formats',
-  );
-
-  // Exported permission: show more format tips link.
-  $permissions['show more format tips link'] = array(
-    'name' => 'show more format tips link',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
-    ),
-    'module' => 'better_formats',
-  );
-
-  // Exported permission: view own unpublished content.
-  $permissions['view own unpublished content'] = array(
-    'name' => 'view own unpublished content',
-    'roles' => array(
-      0 => 'anonymous user',
-      1 => 'authenticated user',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: view revisions.
-  $permissions['view revisions'] = array(
-    'name' => 'view revisions',
-    'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+      'Kommunikation' => 'Kommunikation',
+      'Webmaster' => 'Webmaster',
     ),
     'module' => 'node',
   );
@@ -187,83 +36,169 @@ function os2web_settings_user_default_permissions() {
   $permissions['access workbench'] = array(
     'name' => 'access workbench',
     'roles' => array(
-      0 => 'authenticated user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'workbench',
   );
 
-  // Exported permission: access workbench access by role.
-  $permissions['access workbench access by role'] = array(
-    'name' => 'access workbench access by role',
+  // Exported permission: add media from remote sources.
+  $permissions['add media from remote sources'] = array(
+    'name' => 'add media from remote sources',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
     ),
-    'module' => 'workbench_access',
+    'module' => 'media_internet',
+  );
+
+  // Exported permission: administer nodes.
+  $permissions['administer nodes'] = array(
+    'name' => 'administer nodes',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: administer os2web.
+  $permissions['administer os2web'] = array(
+    'name' => 'administer os2web',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
+    ),
+    'module' => 'os2web_settings',
   );
 
   // Exported permission: administer workbench.
   $permissions['administer workbench'] = array(
     'name' => 'administer workbench',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
     ),
     'module' => 'workbench',
   );
 
-  // Exported permission: administer workbench access.
-  $permissions['administer workbench access'] = array(
-    'name' => 'administer workbench access',
+  // Exported permission: delete revisions.
+  $permissions['delete revisions'] = array(
+    'name' => 'delete revisions',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
     ),
-    'module' => 'workbench_access',
+    'module' => 'node',
   );
 
-  // Exported permission: assign workbench access.
-  $permissions['assign workbench access'] = array(
-    'name' => 'assign workbench access',
+  // Exported permission: import media.
+  $permissions['import media'] = array(
+    'name' => 'import media',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
     ),
-    'module' => 'workbench_access',
+    'module' => 'media',
   );
 
-  // Exported permission: batch update workbench access.
-  $permissions['batch update workbench access'] = array(
-    'name' => 'batch update workbench access',
+  // Exported permission: revert revisions.
+  $permissions['revert revisions'] = array(
+    'name' => 'revert revisions',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Webmaster',
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
     ),
-    'module' => 'workbench_access',
+    'module' => 'node',
   );
 
-  // Exported permission: view workbench access information.
-  $permissions['view workbench access information'] = array(
-    'name' => 'view workbench access information',
+  // Exported permission: show format selection for file.
+  $permissions['show format selection for file'] = array(
+    'name' => 'show format selection for file',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Editor',
-      2 => 'Kommunikation',
-      3 => 'Webmaster',
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
     ),
-    'module' => 'workbench_access',
+    'module' => 'better_formats',
   );
 
-  // Exported permission: view workbench taxonomy pages.
-  $permissions['view workbench taxonomy pages'] = array(
-    'name' => 'view workbench taxonomy pages',
+  // Exported permission: show format selection for node.
+  $permissions['show format selection for node'] = array(
+    'name' => 'show format selection for node',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Editor',
-      2 => 'Kommunikation',
-      3 => 'Webmaster',
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
     ),
-    'module' => 'workbench_access',
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show format selection for rules_config.
+  $permissions['show format selection for rules_config'] = array(
+    'name' => 'show format selection for rules_config',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show format selection for taxonomy_term.
+  $permissions['show format selection for taxonomy_term'] = array(
+    'name' => 'show format selection for taxonomy_term',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show format selection for user.
+  $permissions['show format selection for user'] = array(
+    'name' => 'show format selection for user',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show format tips.
+  $permissions['show format tips'] = array(
+    'name' => 'show format tips',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: show more format tips link.
+  $permissions['show more format tips link'] = array(
+    'name' => 'show more format tips link',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: view own unpublished content.
+  $permissions['view own unpublished content'] = array(
+    'name' => 'view own unpublished content',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: view revisions.
+  $permissions['view revisions'] = array(
+    'name' => 'view revisions',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
+    ),
+    'module' => 'node',
   );
 
   return $permissions;

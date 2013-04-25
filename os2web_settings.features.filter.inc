@@ -25,15 +25,6 @@ function os2web_settings_filter_default_formats() {
           'filter_url_length' => '72',
         ),
       ),
-      'tite_removal' => array(
-        'weight' => '-47',
-        'status' => '1',
-        'settings' => array(
-          'allowed_html' => '',
-          'filter_html_help' => 1,
-          'filter_html_nofollow' => 0,
-        ),
-      ),
       'media_filter' => array(
         'weight' => '-45',
         'status' => '1',
