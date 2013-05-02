@@ -457,7 +457,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_10_parent';
-  $strongarm->value = 'os2web-menu-contentmenu:912';
+  $strongarm->value = 'menu-contentmenu:912';
   $export['menu_block_10_parent'] = $strongarm;
 
   $strongarm = new stdClass();
