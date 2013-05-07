@@ -18,7 +18,7 @@ libraries[dompdf][destination] = "libraries"
 
 ; Features + related
 projects[features][subdir] = "contrib"
-projects[features][version] = "2.0-beta1"
+projects[features][version] = "2.0-beta2"
 
 projects[strongarm][subdir] = "contrib"
 projects[strongarm][version] = "2.0"
@@ -30,7 +30,7 @@ projects[better_formats][subdir] = "contrib"
 projects[better_formats][version] = "1.x-dev"
 
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.2"
+projects[ctools][version] = "1.3"
 
 projects[customfilter][subdir] = "contrib"
 projects[customfilter][version] = "1.0"
@@ -45,7 +45,7 @@ projects[media][version] = "2.0-unstable7"
 projects[media][patch][] = "http://drupal.org/files/media-media_browser-preview_javascript_incompatibility-1743040.patch"
 
 projects[media_youtube][subdir] = "contrib"
-projects[media_youtube][version] = "2.0-rc2"
+projects[media_youtube][version] = "2.0-rc3"
 
 projects[print][subdir] = "contrib"
 projects[print][version] = "1.2"
