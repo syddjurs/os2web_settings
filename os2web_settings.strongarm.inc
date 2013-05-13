@@ -105,7 +105,7 @@ function os2web_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_medium';
-  $strongarm->value = 'D, d-m-Y H:i';
+  $strongarm->value = 'D, Y-m-d H:i';
   $export['date_format_medium'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -119,7 +119,7 @@ function os2web_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_short';
-  $strongarm->value = 'd-m-Y H:i';
+  $strongarm->value = 'Y-m-d H:i';
   $export['date_format_short'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -457,7 +457,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_10_parent';
-  $strongarm->value = 'menu-contentmenu:912';
+  $strongarm->value = 'menu-indholdsmenu:912';
   $export['menu_block_10_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -513,7 +513,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_11_parent';
-  $strongarm->value = 'os2web-menu-contentmenu:0';
+  $strongarm->value = 'menu-indholdsmenu:0';
   $export['menu_block_11_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -569,7 +569,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_12_parent';
-  $strongarm->value = 'os2web-menu-contentmenu:0';
+  $strongarm->value = 'menu-indholdsmenu:0';
   $export['menu_block_12_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -590,7 +590,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_1_admin_title';
-  $strongarm->value = '';
+  $strongarm->value = 'Indhold';
   $export['menu_block_1_admin_title'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -611,7 +611,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_1_follow';
-  $strongarm->value = 0;
+  $strongarm->value = 'active';
   $export['menu_block_1_follow'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -625,7 +625,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_1_parent';
-  $strongarm->value = 'os2web-main-menu:0';
+  $strongarm->value = 'os2web-menu-contentmenu:0';
   $export['menu_block_1_parent'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -646,7 +646,7 @@ example.org';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'nice_menus_menu_1';
-  $strongarm->value = 'menu-andre-netsteder';
+  $strongarm->value = 'os2web-menu-other-sites';
   $export['nice_menus_menu_1'] = $strongarm;
 
   $strongarm = new stdClass();
