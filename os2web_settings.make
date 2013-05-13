@@ -12,7 +12,7 @@ core = 7.x
 libraries[dompdf][download][type] = "git"
 libraries[dompdf][download][url] = "https://github.com/dompdf/dompdf.git"
 libraries[dompdf][download][revision] = "master"
-libraries[dompdf][destination] = "libraries"
+libraries[dompdf][destination] = "modules/contrib/print
 
 ; Contrib modules
 
