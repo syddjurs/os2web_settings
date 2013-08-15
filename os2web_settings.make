@@ -38,7 +38,7 @@ projects[customfilter][version] = "1.0"
 projects[customfilter][patch][] = "http://drupal.org/files/customfilter-1034556.patch"
 
 projects[pathauto][subdir] = "contrib"
-projects[pathauto][version] = "1.1"
+projects[pathauto][version] = "1.2"
 
 projects[media][subdir] = "contrib"
 projects[media][version] = "2.0-unstable7"
