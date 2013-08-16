@@ -12,7 +12,7 @@ core = 7.x
 libraries[dompdf][download][type] = "git"
 libraries[dompdf][download][url] = "https://github.com/dompdf/dompdf.git"
 libraries[dompdf][download][revision] = "master"
-libraries[dompdf][destination] = "libraries"
+libraries[dompdf][destination] = "modules/contrib/print"
 
 ; Contrib modules
 
@@ -29,8 +29,8 @@ projects[strongarm][version] = "2.0"
 projects[better_formats][subdir] = "contrib"
 projects[better_formats][version] = "1.x-dev"
 
-projects[ctools][subdir] = "contrib"
-projects[ctools][version] = "1.3"
+# projects[ctools][subdir] = "contrib"
+# projects[ctools][version] = "1.3"
 
 projects[customfilter][subdir] = "contrib"
 projects[customfilter][version] = "1.0"
@@ -38,7 +38,7 @@ projects[customfilter][version] = "1.0"
 projects[customfilter][patch][] = "http://drupal.org/files/customfilter-1034556.patch"
 
 projects[pathauto][subdir] = "contrib"
-projects[pathauto][version] = "1.1"
+projects[pathauto][version] = "1.2"
 
 projects[media][subdir] = "contrib"
 projects[media][version] = "2.0-unstable7"
