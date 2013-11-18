@@ -208,31 +208,28 @@ function _os2web_settings_send_error_email($message, $minimum_time_between = 0) 
     // Dont spam too much. Only send the error every half hour.
     $last_notified = variable_get('os2web_settings_webmaster_last_notif_time_' . md5($message), 0);
     if ($minimum_time_between > 0 && $last_notified < strtotime('-' . (int) $minimum_time_between . ' min')) {
-      _os2web_settings_send_error_email($err_message);
-      variable_set('os2web_settings_webmaster_last_notif_time' . md5($message), time());
+      // Set up the mail body.
+      $mail_body = t('You have recieved a notice from !site_name:', array('!site_name' => variable_get('site_name'))) . "\n";
+      $mail_body .= $message . "\n";
+
+      $from = variable_get('site_mail', '');
+      $my_module = 'os2web_settings';
+      $my_mail_token = 'error_email';
+      $message = array(
+        'id' => $my_module . '_' . $my_mail_token,
+        'to' => $mail_to,
+        'subject' => t('OS2web - Status email from !site_name', array('!site_name' => variable_get('site_name'))),
+        'body' => format_string($mail_body, array('!message' => check_plain($message))),
+        'headers' => array(
+          'From' => $from,
+          'Sender' => $from,
+          'Return-Path' => $from,
+        ),
+      );
+      // Send mail.
+      $mail_system = drupal_mail_system($my_module, $my_mail_token);
+      variable_set('os2web_settings_webmaster_last_notif_time_' . md5($message), time());
+      return $mail_system->mail($message);
     }
-
-    // Set up the mail body.
-    $mail_body = t('You have recieved a notice from !site_name:', array('!site_name' => variable_get('site_name'))) . "\n";
-    $mail_body .= $message . "\n";
-
-    $from = variable_get('site_mail', '');
-    $my_module = 'os2web_settings';
-    $my_mail_token = 'error_email';
-    $message = array(
-      'id' => $my_module . '_' . $my_mail_token,
-      'to' => $mail_to,
-      'subject' => t('OS2web - Status email from !site_name', array('!site_name' => variable_get('site_name'))),
-      'body' => format_string($mail_body, array('!message' => check_plain($message))),
-      'headers' => array(
-        'From' => $from,
-        'Sender' => $from,
-        'Return-Path' => $from,
-      ),
-    );
-    // Send mail.
-    $mail_system = drupal_mail_system($my_module, $my_mail_token);
-    return $mail_system->mail($message);
-
   }
 }
