@@ -215,7 +215,7 @@ function _os2web_settings_send_error_email($message, $minimum_time_between = 0) 
       $from = variable_get('site_mail', '');
       $my_module = 'os2web_settings';
       $my_mail_token = 'error_email';
-      $message = array(
+      $email = array(
         'id' => $my_module . '_' . $my_mail_token,
         'to' => $mail_to,
         'subject' => t('OS2web - Status email from !site_name', array('!site_name' => variable_get('site_name'))),
@@ -229,7 +229,7 @@ function _os2web_settings_send_error_email($message, $minimum_time_between = 0) 
       // Send mail.
       $mail_system = drupal_mail_system($my_module, $my_mail_token);
       variable_set('os2web_settings_webmaster_last_notif_time_' . md5($message), time());
-      return $mail_system->mail($message);
+      return $mail_system->mail($email);
     }
   }
 }
