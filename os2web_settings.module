@@ -186,3 +186,41 @@ function os2web_settings_langfix_process($type, $field, &$context) {
 
   $context['finished'] = 1;
 }
+
+/**
+ * Sends a mail to the techy webmaster of OS2web.
+ *
+ * @param string $message
+ *   The message to send.
+ *
+ * @return bool
+ *   True on success
+ */
+function _os2web_settings_send_error_email($message) {
+  // Only send if an email is stored.
+  if ($mail_to = variable_get('os2web_settings_techmaster_email')) {
+
+    // Set up the mail body.
+    $mail_body = t('You have recieved a notice from !site_name:', array('!site_name', variable_get('site_name'))) . "\n";
+    $mail_body .= $message . "\n";
+
+    $from = variable_get('site_mail', '');
+    $my_module = 'os2web_settings';
+    $my_mail_token = 'error_email';
+    $message = array(
+      'id' => $my_module . '_' . $my_mail_token,
+      'to' => $mail_to,
+      'subject' => t('OS2web - Status email from !site_name', array('!site_name' => variable_get('site_name'))),
+      'body' => format_string($mail_body, array('!message' => check_plain($message))),
+      'headers' => array(
+        'From' => $from,
+        'Sender' => $from,
+        'Return-Path' => $from,
+      ),
+    );
+    // Send mail.
+    $mail_system = drupal_mail_system($my_module, $my_mail_token);
+    return $mail_system->mail($message);
+
+  }
+}

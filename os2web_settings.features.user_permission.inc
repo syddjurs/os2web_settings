@@ -201,5 +201,24 @@ function os2web_settings_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: access workbench.
+  $permissions['access workbench'] = array(
+    'name' => 'access workbench',
+    'roles' => array(
+      0 => 'authenticated user',
+    ),
+    'module' => 'workbench',
+  );
+
+  // Exported permission: administer workbench.
+  $permissions['administer workbench'] = array(
+    'name' => 'administer workbench',
+    'roles' => array(
+      0 => 'Administrator',
+      1 => 'Webmaster',
+    ),
+    'module' => 'workbench',
+  );
+
   return $permissions;
 }
